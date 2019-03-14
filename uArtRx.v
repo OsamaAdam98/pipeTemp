@@ -1,14 +1,14 @@
 `include "clkRx.v"
 
 module uArtRx (
-    input serialinput,
+    input serialInput,
     output reg[7:0] data = 0);
 
     reg[2:0] stateMachine = 0;
     reg[3:0] clkCount = 0;
     reg[2:0] bitIndex = 0;
-    reg previousState = 1;
     reg currentState = 1;
+    reg previousState = 1;
 
     parameter clocksPerBit = 3'd7;
 
@@ -26,10 +26,10 @@ module uArtRx (
 
     always@(posedge clkRx) begin
         previousState <= currentState;
-        currentState <= serialinput;
+        currentState <= serialInput;
     end
 
-    always@(negedge clkRx) begin
+    always@(posedge clkRx) begin
         case(stateMachine)
 
             waiting: 

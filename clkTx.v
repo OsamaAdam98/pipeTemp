@@ -2,7 +2,7 @@
 module clockTx(output reg clk = 0);
 
     always begin
-        #80 //clock frequency.
+        #160 //clock frequency.
         clk = ~clk;
     end
 

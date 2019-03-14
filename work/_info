@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/CS Training/verilog/SBqM
 vclockRx
-Z0 !s110 1552587717
+Z0 !s110 1552591014
 !i10b 1
 !s100 kOBDh6NNaET11ji=>UED]2
 IRfTa7eR]VCm4ah0afjbjd0
@@ -23,9 +23,9 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1552587717.000000
-Z5 !s107 clkRx.v|D:/git/pipeTemp/uArtRx.v|
-Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/uArtRx.v|
+Z4 !s108 1552591014.000000
+Z5 !s107 clkTx.v|clkRx.v|uArtRx.v|D:/git/pipeTemp/rxTestBench.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/rxTestBench.v|
 !i113 1
 Z7 o-work work
 Z8 tCvgOpt 0
@@ -33,35 +33,57 @@ nclock@rx
 vclockTx
 R0
 !i10b 1
-!s100 FGbHhohdBmAMjim_]eSOX3
-IAPSWFYka9D0kC2535DnXM2
+!s100 `gQ`V@ioYO<WEg<?d>Van1
+IQ>5[jWMGzmPN2`LJc^j0i2
 R1
 R2
-w1552587373
-8D:/git/pipeTemp/clkTx.v
-FD:/git/pipeTemp/clkTx.v
+w1552590326
+8clkTx.v
+FclkTx.v
 L0 2
 R3
 r1
 !s85 0
 31
 R4
-!s107 D:/git/pipeTemp/clkTx.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/clkTx.v|
+R5
+R6
 !i113 1
 R7
 R8
 nclock@tx
+vrxTestBench
+R0
+!i10b 1
+!s100 MgGU@k:WB[g`8H0[0VzBY2
+I3=_^:JHmXBFz9E[S5;E^_3
+R1
+R2
+w1552590827
+8D:/git/pipeTemp/rxTestBench.v
+FD:/git/pipeTemp/rxTestBench.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+nrx@test@bench
 vuArtRx
 R0
 !i10b 1
-!s100 <VN1aCHW3QR]Ymd]cJ@LI3
-IEE6ILh6a^b@Q8aFMe3Q0B3
+!s100 [OCJiH9?^8U>2K0Tz0`[L2
+Inb?TgU8E]DQmDIGmlST9C3
 R1
 R2
-w1552587714
-8D:/git/pipeTemp/uArtRx.v
-FD:/git/pipeTemp/uArtRx.v
+w1552591012
+8uArtRx.v
+FuArtRx.v
 L0 3
 R3
 r1
