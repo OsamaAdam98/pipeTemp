@@ -2,20 +2,27 @@
 
 module uArtRx (
     input serialinput,
-    output[7:0] dataOut = 0);
+    output reg[7:0] data = 0);
 
     reg[2:0] stateMachine = 0;
     reg[3:0] clkCount = 0;
     reg[2:0] bitIndex = 0;
-    reg[7:0] data = 0;
     reg previousState = 1;
     reg currentState = 1;
+
+    parameter clocksPerBit = 3'd7;
+
+    //state machine
+
+    parameter waiting = 2'd0;
+    parameter startBit = 2'd1;
+    parameter dataBits = 2'd2;
+    parameter stopBit = 2'd3;
 
     wire clkRx;
 
     clockRx clock(clkRx);
 
-    assign dataOut = data;
 
     always@(posedge clkRx) begin
         previousState <= currentState;
@@ -79,7 +86,7 @@ module uArtRx (
                 begin
                     if(clkCount < clocksPerBit) begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= startBit;
+                        stateMachine <= stopBit;
                     end
                     else begin
                         clkCount <= 0;

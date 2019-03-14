@@ -1,0 +1,15 @@
+D:/git/pipeTemp/clkTx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clkTx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clockTx
+
+Top level modules:
+	clockTx
+
+} {} {}} D:/git/pipeTemp/clkRx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clkRx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clockRx
+
+Top level modules:
+	clockRx
+
+} {} {}}

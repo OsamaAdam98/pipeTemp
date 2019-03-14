@@ -1,9 +1,8 @@
-`include "parameters.v"
 
 module clockRx(output reg clk = 0);
 
     always begin
-        #periodRx //clock frequency.
+        #10 //clock frequency.
         clk = ~clk;
     end
 
