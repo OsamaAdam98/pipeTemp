@@ -1,4 +1,3 @@
-`include "parameters.v"
 `include "clkRx.v"
 
 module uArtRx (
@@ -15,6 +14,8 @@ module uArtRx (
     wire clkRx;
 
     clockRx clock(clkRx);
+
+    assign dataOut = data;
 
     always@(posedge clkRx) begin
         previousState <= currentState;

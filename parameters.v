@@ -1,5 +1,10 @@
 parameter clocksPerBit = 3'd7;
 
+//clock
+
+parameter periodRx = 10;
+parameter periodTx = (periodRx * 8);
+
 //state machine
 
 parameter waiting = 2'd0;
