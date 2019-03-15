@@ -38,7 +38,7 @@ module rxTestBench();
 
     initial begin
         @(posedge clk);
-        transmit(8'h32);
+        transmit(8'hAF);
     end
 
 endmodule

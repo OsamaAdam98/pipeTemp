@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/CS Training/verilog/SBqM
 vclock
-Z0 !s110 1552613965
+Z0 !s110 1552691790
 !i10b 1
 !s100 i@[@T<KaakPmOiQS?7m`50
 I3H5]M_^SMPY7hIHJMkkK@0
@@ -23,9 +23,9 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1552613965.000000
-Z5 !s107 clk.v|uArtRx.v|D:/git/pipeTemp/rxTestBench.v|
-Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/rxTestBench.v|
+Z4 !s108 1552691790.000000
+Z5 !s107 clk.v|uArtRx.v|uArtTx.v|D:/git/pipeTemp/testBench.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/testBench.v|
 !i113 1
 Z7 o-work work
 Z8 tCvgOpt 0
@@ -46,7 +46,7 @@ r1
 31
 Z10 !s108 1552605228.000000
 Z11 !s107 clkTx.v|clkRx.v|uArtRx.v|D:/git/pipeTemp/rxTestBench.v|
-R6
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/rxTestBench.v|
 !i113 1
 R7
 R8
@@ -68,22 +68,44 @@ r1
 31
 R10
 R11
-R6
+R12
 !i113 1
 R7
 R8
 nclock@tx
 vrxTestBench
-R0
+!s110 1552691789
 !i10b 1
-!s100 JF7b=kV<2bFjV8;idCLzd1
-IWJm38`PDT1k=LU10CR`dS3
+!s100 ncEEjJNZ6o`VU;mb`h]Oc3
+I2e^O_[7]KXkMenFITBFMJ0
 R1
 R2
-w1552613962
+w1552614056
 8D:/git/pipeTemp/rxTestBench.v
 FD:/git/pipeTemp/rxTestBench.v
 L0 5
+R3
+r1
+!s85 0
+31
+!s108 1552691789.000000
+!s107 clk.v|uArtRx.v|D:/git/pipeTemp/rxTestBench.v|
+R12
+!i113 1
+R7
+R8
+nrx@test@bench
+vtestBench
+R0
+!i10b 1
+!s100 @e47_^LT]a:?8HIU[<M6J3
+I0cSg^fYe47VYUocd?F[_S3
+R1
+R2
+w1552691786
+8D:/git/pipeTemp/testBench.v
+FD:/git/pipeTemp/testBench.v
+L0 6
 R3
 r1
 !s85 0
@@ -94,9 +116,9 @@ R6
 !i113 1
 R7
 R8
-nrx@test@bench
+ntest@bench
 vtestTx
-R0
+!s110 1552613965
 !i10b 1
 !s100 bLmiL978MM=l^A296d0=^0
 IYc=WUT<[e^E0[DWOgQCd<2
@@ -110,7 +132,7 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1552613965.000000
 !s107 D:/git/pipeTemp/phTx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/phTx.v|
 !i113 1
@@ -118,24 +140,46 @@ R7
 R8
 ntest@tx
 vuArtRx
-!s110 1552613966
+R0
 !i10b 1
-!s100 LOJ2T`e:^94_^ea;ZN@kY1
-IdQEomACE0Y89GWTcI3RCU0
+!s100 0OU;Z;T1B`QnLWP@V_5Q;2
+I0Q04n694RV5UgnUTzRg`h2
 R1
 R2
 w1552613595
-8D:/git/pipeTemp/uArtRx.v
-FD:/git/pipeTemp/uArtRx.v
+8uArtRx.v
+FuArtRx.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 D:/git/pipeTemp/uArtRx.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/uArtRx.v|
+R5
+R6
 !i113 1
 R7
 R8
 nu@art@rx
+vuArtTx
+R0
+!i10b 1
+!s100 Td3cF`BiG>D3DJ47:;RVF0
+I@SYNR7M;2UzdLP@1di`P10
+R1
+R2
+w1552691608
+8D:/git/pipeTemp/uArtTx.v
+FD:/git/pipeTemp/uArtTx.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/git/pipeTemp/uArtTx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/uArtTx.v|
+!i113 1
+R7
+R8
+nu@art@tx

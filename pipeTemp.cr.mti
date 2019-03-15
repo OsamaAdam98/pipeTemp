@@ -1,22 +1,31 @@
-D:/git/pipeTemp/uArtRx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/uArtRx.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module uArtRx
-
-Top level modules:
-	uArtRx
-
-} {} {}} D:/git/pipeTemp/clk.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clk.v
+D:/git/pipeTemp/clk.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clk.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module clock
 
 Top level modules:
 	clock
 
-} {} {}} D:/git/pipeTemp/phTx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/phTx.v
+} {} {}} D:/git/pipeTemp/uArtRx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/uArtRx.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module testTx
+-- Compiling module uArtRx
 
 Top level modules:
-	testTx
+	uArtRx
+
+} {} {}} D:/git/pipeTemp/rxTestBench.v {1 {vlog -work work -stats=none D:/git/pipeTemp/rxTestBench.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uArtRx
+-- Compiling module clock
+-- Compiling module rxTestBench
+
+Top level modules:
+	rxTestBench
+
+} {} {}} D:/git/pipeTemp/uArtTx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/uArtTx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uArtTx
+
+Top level modules:
+	uArtTx
 
 } {} {}}
