@@ -15,17 +15,6 @@ module uArtTx(
     reg active = 0;
     reg resetreg = 0;
 
-/*    
-    parameter `clocksPerBit = 87;
-    
-    //state machine
-
-    parameter `waiting = 2'd0;
-    parameter `startBit = 2'd1;
-    parameter `dataBits = 2'd2;
-    parameter `stopBit = 2'd3;
-*/
-
     always@(posedge resetreg)
     begin
         stateMachine <= `waiting;

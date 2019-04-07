@@ -11,24 +11,6 @@ module uArtRx (
     reg[2:0] bitIndex = 0;
     reg validity = 0;
     reg resetreg;
-    //reg currentState = 1;
-    //reg previousState = 1;
-/*
-    parameter `clocksPerBit = 87;
-
-    //state machine
-
-    parameter `waiting = 2'd0;
-    parameter `startBit = 2'd1;
-    parameter `dataBits = 2'd2;
-    parameter `stopBit = 2'd3;
-*/
-/*
-    always@(posedge clkRx) begin
-        previousState <= currentState;
-        currentState <= serialInput;
-    end
-*/
 
     always@(posedge resetreg)
     begin
