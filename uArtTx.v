@@ -1,4 +1,5 @@
 `timescale 1ns/10ps
+`include "parameters.v"
 
 module uArtTx(
     input[7:0] dataInput,
@@ -8,26 +9,26 @@ module uArtTx(
     output reg serialOut = 1);
 
     reg[7:0] data = 0;
-    reg[2:0] stateMachine = 0;
+    reg[1:0] stateMachine = 0;
     reg[6:0] clkCount = 0;
     reg[2:0] bitIndex = 0;
     reg active = 0;
     reg resetreg = 0;
 
-    
-    parameter clocksPerBit = 87;
+/*    
+    parameter `clocksPerBit = 87;
     
     //state machine
 
-    parameter waiting = 2'd0;
-    parameter startBit = 2'd1;
-    parameter dataBits = 2'd2;
-    parameter stopBit = 2'd3;
-
+    parameter `waiting = 2'd0;
+    parameter `startBit = 2'd1;
+    parameter `dataBits = 2'd2;
+    parameter `stopBit = 2'd3;
+*/
 
     always@(posedge resetreg)
     begin
-        stateMachine <= waiting;
+        stateMachine <= `waiting;
         data <= 0;
         resetreg <= 0;
     end
@@ -44,7 +45,7 @@ module uArtTx(
 
         case(stateMachine)
 
-            waiting:
+            `waiting:
                 begin
                     serialOut <= 1;
                     clkCount <= 0;
@@ -53,40 +54,40 @@ module uArtTx(
                     if(active) 
                     begin
                         data <= dataInput;
-                        stateMachine <= startBit;
+                        stateMachine <= `startBit;
                     end
 
                     else
-                        stateMachine <= waiting;
+                        stateMachine <= `waiting;
                 end
 
-            startBit:
+            `startBit:
                 begin
 
                     serialOut <= 1'b0;
-                    if(clkCount < (clocksPerBit - 1)) 
+                    if(clkCount < (`clocksPerBit - 1)) 
                     begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= startBit;
+                        stateMachine <= `startBit;
                     end
 
                     else 
                     begin
                         clkCount <= 0;
-                        stateMachine <= dataBits;
+                        stateMachine <= `dataBits;
                     end
 
                 end
 
-            dataBits:
+            `dataBits:
                 begin
 
                     serialOut <= data[bitIndex];
 
-                    if(clkCount < (clocksPerBit - 1)) 
+                    if(clkCount < (`clocksPerBit - 1)) 
                     begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= dataBits;
+                        stateMachine <= `dataBits;
                     end
 
                     else 
@@ -96,34 +97,34 @@ module uArtTx(
                         if(bitIndex < 7) 
                         begin
                             bitIndex <= bitIndex + 1;
-                            stateMachine <= dataBits;
+                            stateMachine <= `dataBits;
                         end
 
                         else 
                         begin
                             bitIndex <= 0;
-                            stateMachine <= stopBit;
+                            stateMachine <= `stopBit;
                         end
 
                     end
 
                 end
 
-            stopBit:
+            `stopBit:
                 begin
                     serialOut <= 1'b1;
 
-                    if(clkCount < (clocksPerBit - 1)) 
+                    if(clkCount < (`clocksPerBit - 1)) 
                     begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= stopBit;
+                        stateMachine <= `stopBit;
                     end
 
                     else 
                     begin
                         active <= 0;
                         clkCount <= 0;
-                        stateMachine <= waiting;
+                        stateMachine <= `waiting;
                     end
 
                 end

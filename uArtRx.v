@@ -1,25 +1,28 @@
+`include "parameters.v"
+
 module uArtRx (
     input serialInput,
     input clkRx,
     input reset,
     output reg[7:0] data = 0);
 
-    reg[2:0] stateMachine = 0;
+    reg[1:0] stateMachine = 0;
     reg[6:0] clkCount = 0;
     reg[2:0] bitIndex = 0;
     reg validity = 0;
     reg resetreg;
     //reg currentState = 1;
     //reg previousState = 1;
-
-    parameter clocksPerBit = 87;
+/*
+    parameter `clocksPerBit = 87;
 
     //state machine
 
-    parameter waiting = 2'd0;
-    parameter startBit = 2'd1;
-    parameter dataBits = 2'd2;
-    parameter stopBit = 2'd3;
+    parameter `waiting = 2'd0;
+    parameter `startBit = 2'd1;
+    parameter `dataBits = 2'd2;
+    parameter `stopBit = 2'd3;
+*/
 /*
     always@(posedge clkRx) begin
         previousState <= currentState;
@@ -29,7 +32,7 @@ module uArtRx (
 
     always@(posedge resetreg)
     begin
-        stateMachine <= waiting;
+        stateMachine <= `waiting;
         data <= 0;
         resetreg <= 0;
     end
@@ -41,50 +44,50 @@ module uArtRx (
 
         case(stateMachine)
 
-            waiting: 
+            `waiting: 
                 begin
                     clkCount <= 0;
                     bitIndex <= 0;
                     if(!serialInput) 
                     begin
-                        stateMachine <= startBit;
+                        stateMachine <= `startBit;
                     end
 
                     else 
                     begin
-                        stateMachine <= waiting;
+                        stateMachine <= `waiting;
                     end
                 end
 
-            startBit:
+            `startBit:
                 begin
-                    if(clkCount == (clocksPerBit - 1)/2) 
+                    if(clkCount == (`clocksPerBit - 1)/2) 
                     begin
                         if(!serialInput) 
                         begin
                             validity <= 1;
                             clkCount <= clkCount + 1;
-                            stateMachine <= startBit;
+                            stateMachine <= `startBit;
                         end
 
                         else
-                            stateMachine <= waiting;
+                            stateMachine <= `waiting;
                     end
-                    if((clkCount == (clocksPerBit -1)) && validity) 
+                    if((clkCount == (`clocksPerBit -1)) && validity) 
                     begin
-                        stateMachine <= dataBits;
+                        stateMachine <= `dataBits;
                     end
 
                     else 
                     begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= startBit;
+                        stateMachine <= `startBit;
                     end
                 end
 
-            dataBits:
+            `dataBits:
                 begin
-                    if(clkCount < clocksPerBit) 
+                    if(clkCount < `clocksPerBit) 
                     begin
                         clkCount <= clkCount + 1;
                     end
@@ -97,34 +100,34 @@ module uArtRx (
                         if(bitIndex < 7) 
                         begin
                             bitIndex = bitIndex + 1;
-                            stateMachine <= dataBits;
+                            stateMachine <= `dataBits;
                         end
 
                         else 
                         begin
                             bitIndex <= 0;
-                            stateMachine <= stopBit;
+                            stateMachine <= `stopBit;
                         end
 
                     end
                 end
 
-            stopBit:
+            `stopBit:
                 begin
-                    if(clkCount < clocksPerBit) 
+                    if(clkCount < `clocksPerBit) 
                     begin
                         clkCount <= clkCount + 1;
-                        stateMachine <= stopBit;
+                        stateMachine <= `stopBit;
                     end
 
                     else 
                     begin
                         clkCount <= 0;
-                        stateMachine <= waiting;
+                        stateMachine <= `waiting;
                     end
                 end
             
-            default: stateMachine <= waiting;
+            default: stateMachine <= `waiting;
 
         endcase
     end
