@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/CS Training/verilog/SBqM
 vclock
-Z0 !s110 1554661890
+Z0 !s110 1554666679
 !i10b 1
 !s100 i@[@T<KaakPmOiQS?7m`50
 I3H5]M_^SMPY7hIHJMkkK@0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1554661890.000000
+Z4 !s108 1554666679.000000
 Z5 !s107 clk.v|uArtRx.v|uArtTx.v|D:/git/pipeTemp/testBench.v|
 Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/testBench.v|
 !i113 1
@@ -74,7 +74,7 @@ R7
 R8
 nclock@tx
 vrxTestBench
-!s110 1554661889
+R0
 !i10b 1
 !s100 ncEEjJNZ6o`VU;mb`h]Oc3
 I2e^O_[7]KXkMenFITBFMJ0
@@ -88,7 +88,7 @@ R3
 r1
 !s85 0
 31
-!s108 1554661889.000000
+R4
 !s107 clk.v|uArtRx.v|D:/git/pipeTemp/rxTestBench.v|
 R12
 !i113 1
@@ -98,11 +98,11 @@ nrx@test@bench
 vtestBench
 R0
 !i10b 1
-!s100 ?6=8QD6@<cL>3bOd[cm>I2
-Iani:RV6@j^AWM9A>Q?46R3
+!s100 F7IEB?XRBef_MzV3UQf3k3
+IXlVL5nF2Q]X^HCL1SGOzb3
 R1
 R2
-w1554661887
+w1554666318
 8D:/git/pipeTemp/testBench.v
 FD:/git/pipeTemp/testBench.v
 L0 6
@@ -142,11 +142,11 @@ ntest@tx
 vuArtRx
 R0
 !i10b 1
-!s100 0OU;Z;T1B`QnLWP@V_5Q;2
-I0Q04n694RV5UgnUTzRg`h2
+!s100 2?fYR@zG2]W7CYgjSn?X:0
+I=jToUjCHXHX@B=>Q=2:B91
 R1
 R2
-w1552613595
+w1554666302
 8uArtRx.v
 FuArtRx.v
 L0 1
@@ -164,11 +164,11 @@ nu@art@rx
 vuArtTx
 R0
 !i10b 1
-!s100 Td3cF`BiG>D3DJ47:;RVF0
-I@SYNR7M;2UzdLP@1di`P10
+!s100 HU]JY^Y;f@PWgYJg<B3O53
+IO1R6O1BfSk0HTzZN6TXMe1
 R1
 R2
-w1554660985
+w1554666676
 8D:/git/pipeTemp/uArtTx.v
 FD:/git/pipeTemp/uArtTx.v
 L0 3

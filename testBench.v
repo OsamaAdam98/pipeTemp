@@ -6,10 +6,11 @@
 module testBench();
 
 
-    reg activate = 1;    
+    reg activate = 0;
+    reg reset = 0; 
 
-    uArtTx transmitter(8'h02, clk, activate, serial);
-    uArtRx receiver(serial, clk, data);
+    uArtTx transmitter(8'h52, clk, activate, reset, serial);
+    uArtRx receiver(serial, clk, reset, data);
     clock pulse(clk);
 
 
