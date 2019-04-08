@@ -1,19 +1,4 @@
-D:/git/pipeTemp/digiClock.v {1 {vlog -work work -stats=none D:/git/pipeTemp/digiClock.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module oneSecClock
--- Compiling module digiClock
-
-Top level modules:
-	digiClock
-
-} {} {}} D:/git/pipeTemp/oneSecClock.v {1 {vlog -work work -stats=none D:/git/pipeTemp/oneSecClock.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module oneSecClock
-
-Top level modules:
-	oneSecClock
-
-} {} {}} D:/git/pipeTemp/digiClockTest.v {1 {vlog -work work -stats=none D:/git/pipeTemp/digiClockTest.v
+D:/git/pipeTemp/digiClockTest.v {1 {vlog -work work -stats=none D:/git/pipeTemp/digiClockTest.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module oneSecClock
 -- Compiling module digiClock
@@ -22,12 +7,27 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	digiClockTest
 
-} {} {}} D:/git/pipeTemp/clk.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clk.v
+} {} {}} D:/git/pipeTemp/oneSecClock.v {1 {vlog -work work -stats=none D:/git/pipeTemp/oneSecClock.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module clock
+-- Compiling module oneSecClock
 
 Top level modules:
-	clock
+	oneSecClock
+
+} {} {}} D:/git/pipeTemp/digiClock.v {1 {vlog -work work -stats=none D:/git/pipeTemp/digiClock.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module oneSecClock
+-- Compiling module digiClock
+
+Top level modules:
+	digiClock
+
+} {} {}} D:/git/pipeTemp/uArtRx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/uArtRx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uArtRx
+
+Top level modules:
+	uArtRx
 
 } {} {}} D:/git/pipeTemp/rxTestBench.v {1 {vlog -work work -stats=none D:/git/pipeTemp/rxTestBench.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -38,46 +38,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	rxTestBench
 
-} {} {}} D:/git/pipeTemp/uArtRx.v {1 {vlog -work work -stats=none D:/git/pipeTemp/uArtRx.v
+} {} {}} D:/git/pipeTemp/clk.v {1 {vlog -work work -stats=none D:/git/pipeTemp/clk.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module uArtRx
-
-Top level modules:
-	uArtRx
-
-} {} {}} D:/git/pipeTemp/pipeTemp.v {1 {vlog -work work -stats=none D:/git/pipeTemp/pipeTemp.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module uArtTx
--- Compiling module uArtRx
 -- Compiling module clock
--- Compiling module oneSecClock
--- Compiling module digiClock
--- Compiling module controller
--- Compiling module pipeTemp
 
 Top level modules:
-	pipeTemp
-
-} {} {}} D:/git/pipeTemp/pipeTempTest.v {1 {vlog -work work -stats=none D:/git/pipeTemp/pipeTempTest.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module uArtTx
--- Compiling module uArtRx
--- Compiling module clock
--- Compiling module oneSecClock
--- Compiling module digiClock
--- Compiling module controller
--- Compiling module pipeTemp
--- Compiling module pipeTempTest
-
-Top level modules:
-	pipeTempTest
-
-} {} {}} D:/git/pipeTemp/controller.v {1 {vlog -work work -stats=none D:/git/pipeTemp/controller.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module controller
-
-Top level modules:
-	controller
+	clock
 
 } {} {}} D:/git/pipeTemp/testBench.v {1 {vlog -work work -stats=none D:/git/pipeTemp/testBench.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -95,5 +61,39 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	uArtTx
+
+} {} {}} D:/git/pipeTemp/controller.v {1 {vlog -work work -stats=none D:/git/pipeTemp/controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} D:/git/pipeTemp/pipeTempTest.v {1 {vlog -work work -stats=none D:/git/pipeTemp/pipeTempTest.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uArtTx
+-- Compiling module uArtRx
+-- Compiling module clock
+-- Compiling module oneSecClock
+-- Compiling module digiClock
+-- Compiling module controller
+-- Compiling module pipeTemp
+-- Compiling module pipeTempTest
+
+Top level modules:
+	pipeTempTest
+
+} {} {}} D:/git/pipeTemp/pipeTemp.v {1 {vlog -work work -stats=none D:/git/pipeTemp/pipeTemp.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uArtTx
+-- Compiling module uArtRx
+-- Compiling module clock
+-- Compiling module oneSecClock
+-- Compiling module digiClock
+-- Compiling module controller
+-- Compiling module pipeTemp
+
+Top level modules:
+	pipeTemp
 
 } {} {}}

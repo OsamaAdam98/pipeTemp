@@ -6,7 +6,7 @@
 module testBench();
 
 
-    reg activate = 0;
+    reg activate = 1;
     reg reset = 0; 
 
     uArtTx transmitter(8'h52, clk, activate, reset, serial);

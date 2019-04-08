@@ -6,6 +6,7 @@
 
 //sync
 `define clocksPerBit 87
+`define clockPeriod 100
 
 //limits
 `define alarm 8'h95
