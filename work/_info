@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/CS Training/verilog/SBqM
 vclock
-Z0 !s110 1554668552
+Z0 !s110 1554734229
 !i10b 1
 !s100 i@[@T<KaakPmOiQS?7m`50
 I3H5]M_^SMPY7hIHJMkkK@0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1554668552.000000
+Z4 !s108 1554734229.000000
 Z5 !s107 clk.v|uArtRx.v|parameters.v|uArtTx.v|D:/git/pipeTemp/testBench.v|
 Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/testBench.v|
 !i113 1
@@ -73,6 +73,72 @@ R12
 R7
 R8
 nclock@tx
+vdigiClock
+R0
+!i10b 1
+!s100 hXoGCgSI90A4k@A1]:5dg1
+I>W`PFi2SkjMY?HQ46Hoea2
+R1
+R2
+w1554734225
+8digiClock.v
+FdigiClock.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+Z13 !s107 oneSecClock.v|digiClock.v|D:/git/pipeTemp/digiClockTest.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/digiClockTest.v|
+!i113 1
+R7
+R8
+ndigi@clock
+vdigiClockTest
+R0
+!i10b 1
+!s100 jIA^kfH@TWd;EzGRSYNFd2
+IHjT_X6B:]n=bb8Sg]mbjX3
+R1
+R2
+w1554733989
+8D:/git/pipeTemp/digiClockTest.v
+FD:/git/pipeTemp/digiClockTest.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R13
+R14
+!i113 1
+R7
+R8
+ndigi@clock@test
+voneSecClock
+R0
+!i10b 1
+!s100 QWYMahlPd9ZQ0;RRlg`Y02
+IzcmPL6E5bUPGImd;8Ij2o0
+R1
+R2
+w1554733419
+8oneSecClock.v
+FoneSecClock.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R13
+R14
+!i113 1
+R7
+R8
+none@sec@clock
 vrxTestBench
 R0
 !i10b 1
@@ -142,11 +208,11 @@ ntest@tx
 vuArtRx
 R0
 !i10b 1
-!s100 [Lib[M>jc6;OVIA?T3UHT0
-IVNKz:83LEHZXn`fnUldLT2
+!s100 PR9C5ZMG]o8AlJen;W4440
+I^m<;;UJKg1e[PbPoXLk5`1
 R1
 R2
-w1554668529
+w1554668940
 8uArtRx.v
 FuArtRx.v
 L0 3
@@ -164,11 +230,11 @@ nu@art@rx
 vuArtTx
 R0
 !i10b 1
-!s100 CV5_XOT3;7Qa`]n]8Lh@R2
-I3M]QgJQjEmJhGff71XD>03
+!s100 feOQCL=BMYSj[3hVP;ZP:0
+IJAHgCemIW7Xl>z64;e_VH1
 R1
 R2
-w1554668548
+w1554668908
 8D:/git/pipeTemp/uArtTx.v
 FD:/git/pipeTemp/uArtTx.v
 L0 4

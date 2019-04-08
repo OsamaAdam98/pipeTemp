@@ -4,5 +4,9 @@
 `define dataBits 2'b10
 `define stopBit 2'b11
 
-//Sync
+//sync
 `define clocksPerBit 87
+
+//limits
+`define alarm 8'h96
+`define shutdown 8'hc8
