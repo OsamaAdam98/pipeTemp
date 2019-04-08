@@ -6,11 +6,12 @@ module digiClock(
     output reg[5:0] minuits = 0,
     output reg[4:0] hours = 0,
     output reg[4:0] days = 0,
-    output reg[3:0] months = 0);
+    output reg[3:0] months = 0,
+    output reg pulse = 0);
 
     wire clk;
 
-    oneSecClock pulse(clk);
+    oneSecClock Pulse(clk);
 
     always@(posedge reset)
     begin
@@ -30,6 +31,7 @@ module digiClock(
         begin
             seconds <= 0;
             minuits <= minuits + 1;
+            pulse <= ~pulse;
         end
 
         if(minuits == 60)
@@ -50,6 +52,11 @@ module digiClock(
             months <= months + 1;
         end
 
+        if(months == 12)
+        begin
+            months <= 0;
+        end
+
     end
 
-endmodule;
+endmodule

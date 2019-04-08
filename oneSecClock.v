@@ -1,4 +1,4 @@
-`timescale 1s/100ms
+`timescale 1us/100ns
 
 module oneSecClock(output reg clk = 0);
 

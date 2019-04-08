@@ -8,5 +8,5 @@
 `define clocksPerBit 87
 
 //limits
-`define alarm 8'h96
-`define shutdown 8'hc8
+`define alarm 8'h95
+`define shutdown 8'hc7
