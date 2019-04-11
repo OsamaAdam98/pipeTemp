@@ -7,6 +7,7 @@ module uArtTx(
     input start,
     input reset,
     input reg[1:0] baudRate,
+    input reg[1:0] parity,
     output reg serialOut = 1);
 
     reg[7:0] data = 0;
@@ -41,6 +42,7 @@ module uArtTx(
             `slow: clocksPerBit <= `_4800;
             `normal: clocksPerBit <= `_9600;
         endcase
+        
 
         case(stateMachine)
 
@@ -62,7 +64,12 @@ module uArtTx(
 
             `startBit:
                 begin
-
+                    case(parity)
+                            `noParity: data[7] <= data[7];
+                            `oddParity: data[7] <= (data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4] ^ data[5] ^ data[6]);
+                            `evenParity: data[7] <= !(data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4] ^ data[5] ^ data[6]);
+                    endcase
+                    
                     serialOut <= 1'b0;
                     if(clkCount < (clocksPerBit - 1)) 
                     begin

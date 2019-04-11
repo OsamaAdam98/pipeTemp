@@ -5,7 +5,9 @@ module uArtRx (
     input clkRx,
     input reset,
     input reg[1:0] baudRate,
-    output reg[7:0] data = 0);
+    input reg[1:0] parity,
+    output reg[7:0] data = 0,
+    output reg parityError = 0);
 
     reg[1:0] stateMachine = 0;
     reg[2:0] bitIndex = 0;
@@ -106,6 +108,22 @@ module uArtRx (
 
             `stopBit:
                 begin
+
+                    case(parity)
+                        `noParity:
+                            parityError <= 0;
+                        `oddParity:
+                            if(data[7] == (data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4] ^ data[5] ^ data[6]))
+                                parityError <= 0;
+                            else
+                                parityError <= 1;
+                        `evenParity:
+                            if(data[7] == !(data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4] ^ data[5] ^ data[6]))
+                                parityError <= 0;
+                            else
+                                parityError <= 1;
+                    endcase
+
                     if(clkCount < clocksPerBit) 
                     begin
                         clkCount <= clkCount + 1;

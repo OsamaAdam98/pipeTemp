@@ -14,14 +14,16 @@ module pipeTemp(input[7:0] adc);
     wire[4:0] days;
     wire[3:0] months;
     wire[7:0] database;
+
     reg[1:0] baudRate = `normal;
+    reg[1:0] parity = `oddParity;
 
     reg reset = 0;
 
     controller ControllerInst(adc, clk, digiClk, reset, shutdown, alarm, temp, pulse);
     digiClock DigiClock(reset, seconds, minuits, hours, days, months, digiClk);
-    uArtTx UArtTx(temp, clk, pulse, reset, baudRate, serial);
-    uArtRx UArtRx(serial, clk, reset, baudRate, database);
+    uArtTx UArtTx(temp, clk, pulse, reset, baudRate, parity, serial);
+    uArtRx UArtRx(serial, clk, reset, baudRate, parity, database, parityError);
     clock Clock(clk);
 
 endmodule
