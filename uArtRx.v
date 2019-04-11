@@ -4,7 +4,7 @@ module uArtRx (
     input serialInput,
     input clkRx,
     input reset,
-    input reg[1:0] baudRate,
+    input reg[2:0] baudRate,
     input reg[1:0] parity,
     output reg[7:0] data = 0,
     output reg parityError = 0);
@@ -34,6 +34,7 @@ module uArtRx (
             `kindaSlow: clocksPerBit <= `_2400;
             `slow: clocksPerBit <= `_4800;
             `normal: clocksPerBit <= `_9600;
+            `fastest: clocksPerBit <= `_115200;
         endcase
 
         case(stateMachine)
@@ -59,24 +60,26 @@ module uArtRx (
                     begin
                         if(!serialInput) 
                         begin
-                            validity <= 1;
-                            clkCount <= clkCount + 1;
-                            stateMachine <= `startBit;
+                            //validity <= 1;
+                            clkCount <= 0;
+                            stateMachine <= `dataBits;
                         end
 
                         else
                             stateMachine <= `waiting;
                     end
+                    /*
                     if((clkCount == (clocksPerBit -1)) && validity) 
                     begin
                         stateMachine <= `dataBits;
                     end
-
+                    */
                     else 
                     begin
                         clkCount <= clkCount + 1;
                         stateMachine <= `startBit;
                     end
+                    
                 end
 
             `dataBits:
@@ -133,6 +136,7 @@ module uArtRx (
                     else 
                     begin
                         clkCount <= 0;
+                        //validity <= 0;
                         stateMachine <= `waiting;
                     end
                 end

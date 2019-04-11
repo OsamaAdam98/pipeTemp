@@ -5,17 +5,18 @@
 `define stopBit 2'b11
 
 //baud rate selection
-`define slowest 2'b00
-`define kindaSlow 2'b01
-`define slow 2'b10
-`define normal 2'b11
+`define slowest 3'b000
+`define kindaSlow 3'b001
+`define slow 3'b010
+`define normal 3'b011
+`define fastest 3'b100
 
 //sync
-`define _115200 6 //115200 baud
-`define _1200 521 //1200 baud
-`define _2400 261 //2400 baud
-`define _4800 131 //4800 baud
-`define _9600 66 //9600 baud
+`define _115200 87 //115200 baud
+`define _1200 8333 //1200 baud
+`define _2400 4167 //2400 baud
+`define _4800 2083 //4800 baud
+`define _9600 1042 //9600 baud
 `define clockPeriod 100
 
 //parity

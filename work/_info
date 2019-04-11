@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/CS Training/verilog/SBqM
 vclock
-Z0 !s110 1554982168
+Z0 !s110 1554994381
 !i10b 1
 !s100 2eNj[gJ8RjEe=K0o=zbMW0
 IJ_WPP5fbaP>cm;I7R78RJ2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1554982168.000000
+Z4 !s108 1554994381.000000
 Z5 !s107 clk.v|uArtRx.v|parameters.v|uArtTx.v|D:/git/pipeTemp/uArtTest.v|
 Z6 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/uArtTest.v|
 !i113 1
@@ -117,7 +117,7 @@ R7
 R8
 ndigi@clock
 vdigiClockTest
-!s110 1554982167
+R0
 !i10b 1
 !s100 ZY]cRUKFPm@Q]<EDD[Aec0
 I3Zg^N_X=VPYP6mnWe>5nn2
@@ -131,7 +131,7 @@ R3
 r1
 !s85 0
 31
-!s108 1554982167.000000
+!s108 1554994380.000000
 !s107 oneSecClock.v|digiClock.v|D:/git/pipeTemp/digiClockTest.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/digiClockTest.v|
 !i113 1
@@ -163,11 +163,11 @@ none@sec@clock
 vpipeTemp
 R0
 !i10b 1
-!s100 @X_iAeJ2c1DXac7dDQfjb0
-I5NImV?mz2GTk?<g0N=P>F1
+!s100 TnkYb3CRk`?OSh7gA;D<C3
+ILWYCTKE8SRh;MIKPXWlRZ0
 R1
 R2
-w1554982164
+w1554993961
 8pipeTemp.v
 FpipeTemp.v
 L0 8
@@ -229,11 +229,11 @@ nrx@test@bench
 vtestBench
 R0
 !i10b 1
-!s100 jFVj:Sm<X5=^4DF6[fAE=0
-I;QL0K@dWd10GIWWBMOiP@2
+!s100 ``>fKRLE8Uz864VO`nATi2
+IWc?9cQd1R`]Kz<=U]IOEk1
 R1
 R2
-w1554982078
+w1554993965
 8D:/git/pipeTemp/uArtTest.v
 FD:/git/pipeTemp/uArtTest.v
 L0 6
@@ -273,11 +273,11 @@ ntest@tx
 vuArtRx
 R0
 !i10b 1
-!s100 di_[1DfTmFEj<M6LNKYXc2
-ISWU13PeFM5:DFZ364IU<62
+!s100 SB67mOj8eOR3B?eh=K>_o1
+IZz[EQXg6kcj>5QgHz46d>2
 R1
 R2
-w1554981926
+w1554994372
 8uArtRx.v
 FuArtRx.v
 L0 3
@@ -293,13 +293,13 @@ R7
 R8
 nu@art@rx
 vuArtTx
-R0
+!s110 1554994382
 !i10b 1
-!s100 ??kaYVZY:[8NcfPHOmEL=2
-I[<5R00VMeUBDf`7<gT<QK2
+!s100 fGNEVkIUj2Y5C>@4;g]Yi2
+IGAieRiJ70n:d^OZR=KdmC0
 R1
 R2
-w1554981408
+w1554993877
 8D:/git/pipeTemp/uArtTx.v
 FD:/git/pipeTemp/uArtTx.v
 L0 4
@@ -307,7 +307,7 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1554994382.000000
 !s107 parameters.v|D:/git/pipeTemp/uArtTx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/git/pipeTemp/uArtTx.v|
 !i113 1

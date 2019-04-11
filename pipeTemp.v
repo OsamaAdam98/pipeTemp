@@ -15,7 +15,7 @@ module pipeTemp(input[7:0] adc);
     wire[3:0] months;
     wire[7:0] database;
 
-    reg[1:0] baudRate = `normal;
+    reg[2:0] baudRate = `fastest;
     reg[1:0] parity = `oddParity;
 
     reg reset = 0;

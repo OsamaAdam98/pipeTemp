@@ -6,7 +6,7 @@ module uArtTx(
     input clkTx,
     input start,
     input reset,
-    input reg[1:0] baudRate,
+    input reg[2:0] baudRate,
     input reg[1:0] parity,
     output reg serialOut = 1);
 
@@ -41,6 +41,7 @@ module uArtTx(
             `kindaSlow: clocksPerBit <= `_2400;
             `slow: clocksPerBit <= `_4800;
             `normal: clocksPerBit <= `_9600;
+            `fastest: clocksPerBit <= `_115200;
         endcase
         
 
