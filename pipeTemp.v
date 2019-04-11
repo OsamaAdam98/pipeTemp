@@ -3,6 +3,7 @@
 `include "clk.v"
 `include "digiClock.v"
 `include "controller.v"
+`include "parameters.v"
 
 module pipeTemp(input[7:0] adc);
 
@@ -13,13 +14,14 @@ module pipeTemp(input[7:0] adc);
     wire[4:0] days;
     wire[3:0] months;
     wire[7:0] database;
+    reg[1:0] baudRate = `normal;
 
     reg reset = 0;
 
     controller ControllerInst(adc, clk, digiClk, reset, shutdown, alarm, temp, pulse);
     digiClock DigiClock(reset, seconds, minuits, hours, days, months, digiClk);
-    uArtTx UArtTx(temp, clk, pulse, reset, serial);
-    uArtRx UArtRx(serial, clk, reset, database);
+    uArtTx UArtTx(temp, clk, pulse, reset, baudRate, serial);
+    uArtRx UArtRx(serial, clk, reset, baudRate, database);
     clock Clock(clk);
 
 endmodule
