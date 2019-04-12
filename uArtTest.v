@@ -14,7 +14,7 @@ module testBench();
     wire parityError;
     wire[7:0] data;
 
-    uArtTx transmitter(8'h55, clk, activate, reset, baudRate, `noParity, serial);
+    uArtTx transmitter(8'h75, clk, activate, reset, baudRate, parity, serial);
     uArtRx receiver(serial, clk, reset, baudRate, parity, data, parityError);
     clock pulse(clk);
 
