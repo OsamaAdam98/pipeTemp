@@ -4,13 +4,15 @@ module uArtRx (
     input serialInput,
     input clkRx,
     input reset,
-    input reg[2:0] baudRate,
-    input reg[1:0] parity,
+    input[2:0] baudRateInput,
+    input[1:0] parityInput,
     output reg[7:0] data = 0,
     output reg parityError = 0);
 
     reg[1:0] stateMachine = 0;
     reg[2:0] bitIndex = 0;
+    reg[2:0] baudRate = 0;
+    reg[1:0] parity = 0;
     reg validity = 0;
     reg resetreg;
     
@@ -22,6 +24,12 @@ module uArtRx (
         stateMachine <= `waiting;
         data <= 0;
         resetreg <= 0;
+    end
+
+    always@(posedge clkRx)
+    begin
+        baudRate <= baudRateInput;
+        parity <= parityInput;
     end
 
     always@(posedge clkRx) 

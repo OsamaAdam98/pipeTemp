@@ -2,6 +2,6 @@
 
 module pipeTempTest;
 
-    pipeTemp PipeTemp(8'd100);
+    pipeTemp PipeTemp(8'd200);
 
 endmodule

@@ -16,8 +16,8 @@ module rxTestBench();
 
     task transmit; 
     
-    input[7:0] data;
-    integer i;
+        input[7:0] data;
+        integer i;
 
         begin
         serialInput <= 0;

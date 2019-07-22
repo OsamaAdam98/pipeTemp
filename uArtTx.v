@@ -6,18 +6,21 @@ module uArtTx(
     input clkTx,
     input start,
     input reset,
-    input reg[2:0] baudRate,
-    input reg[1:0] parity,
+    input[2:0] baudRateInput,
+    input[1:0] parityInput,
     output reg serialOut = 1);
 
     reg[7:0] data = 0;
     reg[1:0] stateMachine = 0;
     reg[2:0] bitIndex = 0;
+    reg[2:0] baudRate = 0;
+    reg[1:0] parity = 0;
     reg active = 0;
     reg resetreg = 0;
     
     integer clocksPerBit;
     integer clkCount = 0;
+
 
     always@(posedge resetreg)
     begin
@@ -29,6 +32,12 @@ module uArtTx(
     always@(start)
     begin
         active <= start;
+    end
+
+    always@(posedge clkTx)
+    begin
+        baudRate <= baudRateInput;
+        parity <= parityInput;
     end
 
     always@(posedge clkTx) 
